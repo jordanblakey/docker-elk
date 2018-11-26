@@ -7,20 +7,22 @@ Setup Elasticsearch, Logstash and Kibana (ELK) using Docker Containers.
 ## Terms
 
 *ElasticSearch*: Elasticsearch is an open source distributed, RESTful search and analytics engine capable of solving a growing number of use cases.
+
 *LogStash*: Logstash is an open source, server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and sends it to Elasticsearch.
+
 *Kibana* : Elasticsearch is an open source distributed, RESTful search and analytics engine capable of solving a growing number of use cases.
+
 *Apache Lucene*: While suitable for any application that requires full text indexing and searching capability, Lucene has been widely recognized for its utility in the implementation of Internet search engines and local, single-site searching. Lucene includes a feature to perform a fuzzy search based on edit distance.
 
-### Install ElasticSearch Using Docker
+### Run Elasticsearch + Kibana + Logstash using Docker
 
-#### Run Elasticsearch + Kibana + Logstash using Docker
 ```sh
 docker-compose build # If you change the ELK_VERSION in /.env
 docker-compose up
 
 ```
 
-#### ELK endpoints
+### ELK endpoints
 
 ```sh
 curl -X GET "localhost:9200/_cat" # SHOW ALL COMMANDS
@@ -58,7 +60,7 @@ curl -X GET "localhost:9200/_cat/templates"
 
 ---
 
-#### Old Notes
+### Old Notes
 
 ```sh
 docker run -d -p 9200:9200 -p 9300:9300 -it -h elasticsearch --name elasticsearch elasticsearch:6.5.1
