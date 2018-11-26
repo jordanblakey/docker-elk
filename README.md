@@ -19,6 +19,8 @@ Setup Elasticsearch, Logstash and Kibana (ELK) using Docker Containers.
 ```sh
 docker-compose build # If you change the ELK_VERSION in /.env
 docker-compose up
+curl http://localhost:5601 # Check Kibana up and running
+curl http://localhost:9200 # Check Elasticsearch up and running
 
 ```
 
